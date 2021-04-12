@@ -1,0 +1,40 @@
+.blog{
+    padding-left: 10vw !important;
+    color: white;
+    font-size: 3vw ;
+    font-weight: bolder;
+    padding-top: 10px;
+}
+.blog:hover{
+    color: rgb(177, 105, 245);
+}
+.pad{
+    padding-right: 8vw !important;
+}
+.margin{
+    padding: 8px !important;
+    text-decoration: none;
+    color:white;
+    font-size: 22px;
+}
+.margin:hover{
+    color: rgb(177, 105, 245);
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+  }
+.height{
+    height: 15vh;
+    background: black;
+}
+.icon{
+    color: rgb(177, 105, 245);
+}
+.decor{
+    text-decoration: none !important;
+}

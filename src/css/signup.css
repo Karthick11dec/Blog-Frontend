@@ -1,0 +1,12 @@
+.signup{
+    width: 8vw;
+    height: 6vh;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    background: orange;
+}
+.login{
+    font-weight: bold;
+    padding-left: 5px;
+}

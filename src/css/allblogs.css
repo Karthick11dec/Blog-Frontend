@@ -1,0 +1,47 @@
+.button{
+    background-color: red;
+    width: 7vw;
+}
+.fontsize{
+    font-size: 25px;
+    font-weight: 700;
+}
+.fontsize1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.none{
+    text-decoration: none;
+    color: green ;
+}
+.none:hover{
+    color: green;
+}
+.frame{
+    background-color: white;
+    border-radius: 40px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    float: right;
+}
+.frame:hover{
+    background-color: red;
+    color: white;
+}
+.delete{
+    background-color: red;
+    color: white;
+}
+.edit{
+    background-color:rgb(57, 136, 255);
+    color: white;
+    font-weight: bold;
+}
+.edit:hover{
+    font-weight: bold;
+}
+.img{
+    height: 100%;
+    width: 100%;
+}

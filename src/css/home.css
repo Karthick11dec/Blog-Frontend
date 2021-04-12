@@ -1,0 +1,38 @@
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0px !important;
+}
+.border{
+    border-left: black;
+    height: auto;
+}
+.button{
+    border-radius: 30px;
+    background: rgb(23, 158, 23) !important;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    box-sizing:content-box;
+    text-align: center;
+    height: 4vh;
+    padding-top: 5px;
+}
+.underline{
+    text-decoration: underline !important;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.green{
+    color: green !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.font{
+    font-size: 16px;
+    font-weight: 600 !important;
+}
+.link{
+    text-decoration: none !important;
+    color: black !important;
+}

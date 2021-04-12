@@ -1,0 +1,16 @@
+.danger{
+    width: 10vw;
+    background-color: red !important;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+.newpost{
+    background-color: rgb(177, 105, 245);
+    color: white;
+}
+.newpost:hover{
+    background-color: white;
+    color: black;
+}

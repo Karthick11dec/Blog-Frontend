@@ -1,0 +1,52 @@
+.blog{
+    padding-left: 10vw !important;
+    color: white;
+    font-size: 3vw ;
+    font-weight: bolder;
+    padding-top: 10px;
+}
+.blog:hover{
+    color: rgb(177, 105, 245);
+}
+.margin3{
+    font-size: 18px;
+    margin-right: 7vw !important;
+    background: rgb(177, 105, 245);
+    color: white;
+    font-weight: bold;
+}
+.margin3:hover{
+    color: black;
+    background-color: white;
+}
+.margin2{
+    font-size: 18px;
+    margin-right: 2vw !important;
+    background: rgb(177, 105, 245);
+    color: white;
+}
+.margin2:hover{
+    color: black;
+    background-color: white;
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+  }
+.height{
+    height: 15vh;
+    background: black;
+}
+.icon{
+    color: rgb(177, 105, 245);
+}
+.underline{
+    text-decoration: none;
+}
+.newpost{
+    font-weight: bold;
+}
