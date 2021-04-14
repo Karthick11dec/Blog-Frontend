@@ -12,8 +12,8 @@ const Navbar1 = () => {
     const token = localStorage.getItem("token");
 
     const Logout = () => {
-        // localStorage.clear();
-        window.location.replace("https://blog-frontend-fs.netlify.app/");
+        localStorage.clear();
+        window.location.replace("https://blog-fs.netlify.app/");
         // history.replace('/');
     }
 

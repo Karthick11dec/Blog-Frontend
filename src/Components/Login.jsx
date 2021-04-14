@@ -42,7 +42,7 @@ const Login = () => {
                                 erase();
                                 alert("Hello there !!! login successfully");
 
-                                window.location.replace("https://blog-frontend-fs.netlify.app/home1");
+                                window.location.replace("https://blog-fs.netlify.app/home1");
                             }
                             else {
                                 console.log("token not yet set to localstorage")
