@@ -9,13 +9,19 @@ const Home = () => {
     React.useEffect(() => {
         fetch("https://newsapi.org/v2/everything?q=technology&language=en&sortBy=publishedAt&apiKey=ee116e1cbbf14dd28e1f7168d117cb88")
             .then((data) => data.json())
-            .then((data) => sethome(data.articles))
+            .then((data) => {
+                sethome(data.articles)
+            })
             .catch((error) => console.log(error));
     }, [])
     React.useEffect(() => {
         fetch("https://newsapi.org/v2/everything?q=tesla&language=en&apiKey=ee116e1cbbf14dd28e1f7168d117cb88")
             .then((data) => data.json())
-            .then((data) => sethome1((data.articles).splice(0, 8)))
+            .then((data) =>{
+                let res = data.articles;
+                let splice = res.splice(0, 8);
+                sethome1(splice);
+            })
             .catch((error) => console.log(error));
     }, [])
 

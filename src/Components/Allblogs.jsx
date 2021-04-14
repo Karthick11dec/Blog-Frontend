@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import "../css/allblogs.css";
+
+
 const Allblogs = () => {
 
     const history = useHistory();
@@ -11,7 +13,7 @@ const Allblogs = () => {
 
     useEffect(() => {
         const getdata = async () => {
-            let data = await fetch("http://localhost:3000/myblogs", {
+            let data = await fetch("https://blog-backend-fs.herokuapp.com/myblogs", {
                 headers: {
                     authorization: token
                 }
@@ -27,7 +29,7 @@ const Allblogs = () => {
     }
 
     const Deleteone = async (id) => {
-        let data = await fetch(`http://localhost:3000/onedelete/${id}`, {
+        let data = await fetch(`https://blog-backend-fs.herokuapp.com/onedelete/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -40,7 +42,6 @@ const Allblogs = () => {
             alert("blog has been deleted successfully");
             window.location.reload();
         } else {
-            // console.log(response.message);
             alert("there is matching id found");
         }
     }
@@ -49,7 +50,7 @@ const Allblogs = () => {
         <Fragment>
             {state.map((elem, index) => (
                 <div key={index}>
-                    <div className="d-flex justify-content-center pt-4" style={{ backgroundColor: "black" }}>
+                    <div className="d-flex justify-content-center pt-4 pb-5" style={{ backgroundColor: "black" }}>
                         <div className="card" style={{ width: "60vw" }}>
                             <div className="card-body">
                                 <div className="container">

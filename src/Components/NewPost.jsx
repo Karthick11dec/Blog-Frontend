@@ -12,7 +12,7 @@ const NewPost = () => {
 
     const Add = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/newpost', {
+        fetch('https://blog-backend-fs.herokuapp.com/newpost', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

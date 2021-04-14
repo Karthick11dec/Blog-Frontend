@@ -10,7 +10,7 @@ const Home1 = () => {
     const token = localStorage.getItem("token");
 
     useEffect(() => {
-        fetch("http://localhost:3000/myblogs", {
+        fetch("https://blog-backend-fs.herokuapp.com/myblogs", {
             headers: {
                 authorization: token
             }

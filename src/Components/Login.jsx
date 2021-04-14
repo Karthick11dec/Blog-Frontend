@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link , useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../css/login.css";
 
 const Login = () => {
@@ -7,8 +7,6 @@ const Login = () => {
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [btn, setbtn] = useState(true);
-
-    const history = useHistory();
 
     useEffect(() => {
         if (email.length > 0 && email.includes("@") && password.length >= 8) {
@@ -30,22 +28,21 @@ const Login = () => {
             if (email.includes("@") && password.length >= 8) {
 
                 const senddata = async () => {
-                    await fetch("http://localhost:3000/login", {
+                    await fetch("https://blog-backend-fs.herokuapp.com/login", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({ mail: email, code: password })
-                    }).then((data) => data.json())
+                    })
+                        .then((data) => data.json())
                         .then((data) => {
                             if (data.token) {
                                 localStorage.setItem('token', data.token);
                                 erase();
                                 alert("Hello there !!! login successfully");
 
-                                history.push("/home1")
-
-                                // window.location.href = "http://localhost:3001/home1"
+                                window.location.replace("http://localhost:3001/home1");
                             }
                             else {
                                 console.log("token not yet set to localstorage")

@@ -24,7 +24,7 @@ const Email = () => {
         if (email.includes("@") && email.length > 0) {
 
             const senddata = async () => {
-                await fetch("http://localhost:3000/link", {
+                await fetch("https://blog-backend-fs.herokuapp.com/link", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -36,12 +36,10 @@ const Email = () => {
                         if (res.data) {
 
                             erase();
-                            console.log(res.message)
                             alert("Hello there !!! Reset link is sent to your Email...please check it.");
 
                             window.location.href = "http://localhost:3001/login"
                         } else {
-                            console.log(res.message);
                             alert("Entered mail is not valid");
                         }
                     })

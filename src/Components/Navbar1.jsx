@@ -10,14 +10,17 @@ const Navbar1 = () => {
 
     const Logout = () => {
         localStorage.clear();
-        setTimeout(() => {
-            window.location.replace("http://localhost:3001/");
-        }, 1000);
+        if(token === null){
+            console.log(token)
+            setTimeout(() => {
+                window.location.replace("http://localhost:3001/");
+            }, 1000);
+        }
     }
 
     useEffect(() => {
         const get = async () => {
-            let data = await fetch("http://localhost:3000/allusers", {
+            let data = await fetch("https://blog-backend-fs.herokuapp.com/allusers", {
                 headers: {
                     "Content-Type": "application/json",
                     authorization: token

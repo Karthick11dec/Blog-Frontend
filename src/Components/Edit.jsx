@@ -3,8 +3,7 @@ import { useParams } from "react-router";
 
 const Edit = () => {
 
-    let { id } = useParams();
-    // console.log(id);   
+    let { id } = useParams();  
 
     const [head, sethead] = useState("");
     const [url, seturl] = useState("");
@@ -14,7 +13,7 @@ const Edit = () => {
     const token = localStorage.getItem("token");
 
     useEffect(() => {
-        fetch(`http://localhost:3000/oneget/${id}`, {
+        fetch(`https://blog-backend-fs.herokuapp.com/oneget/${id}`, {
             headers: {
                 authorization: token
             }
@@ -30,7 +29,7 @@ const Edit = () => {
 
     const Update = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3000/onemodify/${id}`, {
+        fetch(`https://blog-backend-fs.herokuapp.com/onemodify/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

@@ -27,7 +27,7 @@ const Reset = () => {
             if (email.includes("@") && password.length >= 8) {
 
                 const senddata = async () => {
-                    await fetch("http://localhost:3000/reset", {
+                    await fetch("https://blog-backend-fs.herokuapp.com/reset", {
                         method: "PUT",
                         headers: {
                             "Content-Type": "application/json"

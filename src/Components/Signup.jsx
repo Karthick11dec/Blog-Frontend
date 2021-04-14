@@ -32,7 +32,7 @@ const Signup = () => {
             if (email.includes("@") && password.length >= 8) {
 
                 const senddata = async () => {
-                    await fetch("http://localhost:3000/register", {
+                    await fetch("https://blog-backend-fs.herokuapp.com/register", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
@@ -43,7 +43,6 @@ const Signup = () => {
                     erase();
                     alert("Hello there !!! your detailes are register successfully , login to continue the service");
                     history.push("/login");
-                    // window.location.href = "http://localhost:3001/login"
                 }
                 senddata();
 
