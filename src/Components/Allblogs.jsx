@@ -57,7 +57,7 @@ const Allblogs = () => {
                                     <div className="row">
                                         <div className="col-12">
                                             <div style={{ fontSize: "15px" }} ><b className="ml-2">{elem.readme} mins</b> Read
-                                              <div style={{ fontSize: "14px", fontWeight: "bold", float: "right" }} >{elem.date}<span className="pl-2 mr-3">{elem.time}</span></div>
+                                              <div style={{ fontSize: "14px", fontWeight: "bold", float: "right" }} >{elem.date}</div>
                                             </div>
                                         </div>
                                         <div className="col-12">
