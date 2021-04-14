@@ -6,35 +6,39 @@ import Email from "./Components/Email";
 import Reset from "./Components/Reset";
 import Home1 from "./Components/Home1";
 import Edit from "./Components/Edit";
+import Front from "./Components/Front";
 
 function App() {
 
   return (
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact={true}>
-            <Home />
-          </Route>
-          <Route path="/signup" exact={true}>
-            <Signup />
-          </Route>
-          <Route path="/login" exact={true}>
-            <Login />
-          </Route>
-          <Route path="/email" exact={true}>
-            <Email />
-          </Route>
-          <Route path="/reset" exact={true}>
-            <Reset />
-          </Route>
-          <Route path="/home1" exact={true}>
-            <Home1 />
-          </Route>
-          <Route path="/edit/:id" exact={true}>
-            <Edit />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact={true}>
+          <Front />
+        </Route>
+        <Route path="/home" exact={true}>
+          <Home />
+        </Route>
+        <Route path="/signup" exact={true}>
+          <Signup />
+        </Route>
+        <Route path="/login" exact={true}>
+          <Login />
+        </Route>
+        <Route path="/email" exact={true}>
+          <Email />
+        </Route>
+        <Route path="/reset" exact={true}>
+          <Reset />
+        </Route>
+        <Route path="/home1" exact={true}>
+          <Home1 />
+        </Route>
+        <Route path="/edit/:id" exact={true}>
+          <Edit />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
 

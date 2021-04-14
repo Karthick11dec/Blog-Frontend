@@ -10,13 +10,6 @@ const Home1 = () => {
     const token = localStorage.getItem("token");
 
     useEffect(() => {
-        setTimeout(() => {
-            window.history.forward();
-            window.history.backward();
-        }, 0);
-    }, []);
-
-    useEffect(() => {
         fetch("https://blog-backend-fs.herokuapp.com/myblogs", {
             headers: {
                 authorization: token

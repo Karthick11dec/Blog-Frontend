@@ -7,7 +7,7 @@ const Navbar = () => {
         <Fragment>
             <nav className='navbar sticky height'>
                 <div>
-                    <Link to="/" className="decor">
+                    <Link to="/home" className="decor">
                         <div className="navbar-brand"><h4 className="blog"><i class="fab fa-blogger icon"></i>  BLOGGER.com</h4></div>
                     </Link>
                 </div>
