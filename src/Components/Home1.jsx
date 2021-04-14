@@ -5,9 +5,16 @@ import Zero from "./Zero";
 
 const Home1 = () => {
 
-    const [zero,setzero] = useState("");
+    const [zero, setzero] = useState("");
 
     const token = localStorage.getItem("token");
+
+    useEffect(() => {
+        setTimeout(() => {
+            window.history.forward();
+            window.history.backward();
+        }, 0);
+    }, []);
 
     useEffect(() => {
         fetch("https://blog-backend-fs.herokuapp.com/myblogs", {
@@ -27,8 +34,7 @@ const Home1 = () => {
     return (
         <Fragment>
             <Navbar1 />
-            {window.history.backward()}
-            { zero ? <Zero /> : <Allblogs /> }
+            { zero ? <Zero /> : <Allblogs />}
         </Fragment>
     )
 }
