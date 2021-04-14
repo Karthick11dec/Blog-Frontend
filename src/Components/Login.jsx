@@ -42,7 +42,7 @@ const Login = () => {
                                 erase();
                                 alert("Hello there !!! login successfully");
                                 
-                                window.location.replace("https://blog-fs.netlify.app/home1")
+                                window.location.href = "https://blog-fs.netlify.app/home1";
 
                             }
                             else {
