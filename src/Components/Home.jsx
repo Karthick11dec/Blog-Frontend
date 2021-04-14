@@ -21,11 +21,11 @@ const Home = () => {
         //     .catch((error) => console.log(error));
     }, [])
     React.useEffect(() => {
-        let getdata = async () =>{
+        let getdata = async () => {
             let res = await fetch("https://newsapi.org/v2/everything?q=tesla&language=en&apiKey=ee116e1cbbf14dd28e1f7168d117cb88");
             let data = await res.json();
             let get = data.articles;
-            let splice = get.splice(0,8);
+            let splice = get.splice(0, 8);
             sethome1(splice);
         }
         getdata();
@@ -48,7 +48,7 @@ const Home = () => {
                     <div className="row">
                         <div className="col-4">
                             {home1.map((data, index) => (
-                                <p key={index}>
+                                <div key={index}>
                                     <a href={data.url} className="link" target="_blank" rel="noreferrer">
                                         <div className="card" data-toggle="tooltip" title="click to view all information about the post">
                                             <div className="card-body">
@@ -77,12 +77,12 @@ const Home = () => {
                                             </div>
                                         </div>
                                     </a>
-                                </p>
+                                </div>
                             ))}
                         </div>
                         <div className="col-5">
                             {home.map((data, index) => (
-                                <p key={index}>
+                                <div key={index}>
                                     <a href={data.url} className="link" target="_blank" rel="noreferrer">
                                         <div className="card" data-toggle="tooltip" title="click to view all information about the post" style={{ width: "40vw" }}>
                                             <div className="card-body">
@@ -107,7 +107,7 @@ const Home = () => {
                                             </div>
                                         </div>
                                     </a>
-                                </p>
+                                </div>
                             ))}
                         </div>
                         <div className="col-3 card pl-5 p-5">
@@ -167,7 +167,7 @@ const Home = () => {
                 </div>
                 <div className="grid">
                     {home.map((data, index) => (
-                        <p key={index}>
+                        <div key={index}>
                             <a href={data.url} className="link" target="_blank" rel="noreferrer">
                                 <div className="card" data-toggle="tooltip" title="click to view all information about the post" style={{ width: "32vw" }}>
                                     <div className="card-body">
@@ -192,7 +192,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </a>
-                        </p>
+                        </div>
                     ))}
                 </div>
             </div>
