@@ -46,7 +46,7 @@ const Edit = () => {
             .then((res) => {
                 if (res.update) {
                     alert("your blog has been Updated");
-                    window.location.replace("https://blog-fs.netlify.app/home1")
+                    window.location.replace("http://localhost:3001/home1");
                 }
                 else {
                     alert("something went wrong with Update newpost");

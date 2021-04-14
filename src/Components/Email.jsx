@@ -38,7 +38,7 @@ const Email = () => {
                             erase();
                             alert("Hello there !!! Reset link is sent to your Email...please check it.");
 
-                            window.location.href = "https://blog-fs.netlify.app/login"
+                            window.location.href = "http://localhost:3001/login"
                         } else {
                             alert("Entered mail is not valid");
                         }

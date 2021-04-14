@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import '../css/signup.css';
 
 const Signup = () => {
@@ -8,8 +8,6 @@ const Signup = () => {
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [buttonHidden, setButtonHidden] = useState(true);
-
-    const history = useHistory();
 
     useEffect(() => {
         if (username.length > 0 && password.length >= 8 && email.length > 0 && email.includes("@")) {
@@ -42,7 +40,7 @@ const Signup = () => {
 
                     erase();
                     alert("Hello there !!! your detailes are register successfully , login to continue the service");
-                    history.push("/login");
+                   window.location.href ="http://localhost:3001/login"
                 }
                 senddata();
 
