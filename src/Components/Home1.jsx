@@ -27,6 +27,7 @@ const Home1 = () => {
     return (
         <Fragment>
             <Navbar1 />
+            {window.history.backward()}
             { zero ? <Zero /> : <Allblogs /> }
         </Fragment>
     )

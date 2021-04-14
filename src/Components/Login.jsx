@@ -43,6 +43,7 @@ const Login = () => {
                                 alert("Hello there !!! login successfully");
                                 
                                 window.location.href = "https://blog-fs.netlify.app/home1";
+                                window.history.forward();
 
                             }
                             else {
