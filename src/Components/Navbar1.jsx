@@ -10,12 +10,7 @@ const Navbar1 = () => {
 
     const Logout = () => {
         localStorage.clear();
-        if(token === null){
-            console.log(token)
-            setTimeout(() => {
-                window.location.replace("https://blog-frontend-fs.netlify.app/");
-            }, 1000);
-        }
+        window.location.replace("https://blog-frontend-fs.netlify.app/");
     }
 
     useEffect(() => {
