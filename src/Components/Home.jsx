@@ -1,44 +1,9 @@
 import React from 'react';
 import '../css/home.css';
 import Navbar from "./Navbar";
+import Data from "./Data";
 
 const Home = () => {
-    const [home, sethome] = React.useState([]);
-    const [home1, sethome1] = React.useState([]);
-
-    React.useEffect(() => {
-        let getdata = async () => {
-            let res = await fetch("https://newsapi.org/v2/everything?q=technology&language=en&sortBy=publishedAt&apiKey=ee116e1cbbf14dd28e1f7168d117cb88");
-            let data = await res.json();
-            sethome(data.articles);
-        }
-        getdata();
-        // fetch("https://newsapi.org/v2/everything?q=technology&language=en&sortBy=publishedAt&apiKey=ee116e1cbbf14dd28e1f7168d117cb88")
-        //     .then((data) => data.json())
-        //     .then((data) => {
-        //         sethome(data.articles)
-        //     })
-        //     .catch((error) => console.log(error));
-    }, [])
-    React.useEffect(() => {
-        let getdata = async () => {
-            let res = await fetch("https://newsapi.org/v2/everything?q=tesla&language=en&apiKey=ee116e1cbbf14dd28e1f7168d117cb88");
-            let data = await res.json();
-            let get = data.articles;
-            let splice = get.splice(0, 8);
-            sethome1(splice);
-        }
-        getdata();
-        // fetch("https://newsapi.org/v2/everything?q=tesla&language=en&apiKey=ee116e1cbbf14dd28e1f7168d117cb88")
-        //     .then((data) => data.json())
-        //     .then((data) => {
-        //         let res = data.articles;
-        //         let splice = res.splice(0, 8);
-        //         sethome1(splice);
-        //     })
-        //     .catch((error) => console.log(error));
-    }, [])
-
 
     return (
         <>
@@ -47,7 +12,7 @@ const Home = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-4">
-                            {home1.map((data, index) => (
+                            {Data.slice(0,8).map((data, index) => (
                                 <div key={index}>
                                     <a href={data.url} className="link" target="_blank" rel="noreferrer">
                                         <div className="card" data-toggle="tooltip" title="click to view all information about the post">
@@ -81,7 +46,7 @@ const Home = () => {
                             ))}
                         </div>
                         <div className="col-5">
-                            {home.map((data, index) => (
+                            {Data.map((data, index) => (
                                 <div key={index}>
                                     <a href={data.url} className="link" target="_blank" rel="noreferrer">
                                         <div className="card" data-toggle="tooltip" title="click to view all information about the post" style={{ width: "40vw" }}>
@@ -166,7 +131,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="grid">
-                    {home.map((data, index) => (
+                    {Data.map((data, index) => (
                         <div key={index}>
                             <a href={data.url} className="link" target="_blank" rel="noreferrer">
                                 <div className="card" data-toggle="tooltip" title="click to view all information about the post" style={{ width: "32vw" }}>
