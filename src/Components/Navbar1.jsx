@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import "../css/navbar1.css";
 import NewPost from "./NewPost";
 
@@ -7,17 +7,14 @@ const Navbar1 = () => {
 
     const [name, setname] = useState("");
 
-    // let history = useHistory();
+    const history = useHistory();
 
     const token = localStorage.getItem("token");
 
     const Logout = () => {
-        localStorage.clear();
-        setTimeout(() => {
-            // window.location.replace("https://blog-frontend-fs.netlify.app/home");
-            window.location.href = "https://blog-frontend-fs.netlify.app/home";
-            // history.replace("/")
-        }, 1000);
+        // localStorage.clear();
+        // window.location.replace("https://blog-frontend-fs.netlify.app/");
+        history.replace('/');
     }
 
     useEffect(() => {
