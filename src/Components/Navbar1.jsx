@@ -13,7 +13,7 @@ const Navbar1 = () => {
         if(token === null){
             console.log(token)
             setTimeout(() => {
-                window.location.replace("http://localhost:3001/");
+                window.location.replace("https://blog-frontend-fs.netlify.app/");
             }, 1000);
         }
     }
