@@ -10,7 +10,7 @@ const Navbar1 = () => {
 
     const Logout = () => {
         localStorage.clear();
-        window.location.replace("http://localhost:3001/");
+        window.location.replace("https://blog-fs.netlify.app/");
     }
 
     useEffect(() => {

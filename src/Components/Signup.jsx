@@ -40,7 +40,7 @@ const Signup = () => {
 
                     erase();
                     alert("Hello there !!! your detailes are register successfully , login to continue the service");
-                   window.location.href ="http://localhost:3001/login"
+                   window.location.href ="https://blog-fs.netlify.app/login"
                 }
                 senddata();
 

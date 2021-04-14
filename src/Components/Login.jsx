@@ -41,7 +41,9 @@ const Login = () => {
                                 localStorage.setItem('token', data.token);
                                 erase();
                                 alert("Hello there !!! login successfully");
-                                window.location.replace('http://localhost:3001/home1');
+                                
+                                window.location.replace("https://blog-fs.netlify.app/home1")
+
                             }
                             else {
                                 console.log("token not yet set to localstorage")
