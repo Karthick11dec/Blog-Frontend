@@ -7,22 +7,36 @@ const Home = () => {
     const [home1, sethome1] = React.useState([]);
 
     React.useEffect(() => {
-        fetch("https://newsapi.org/v2/everything?q=technology&language=en&sortBy=publishedAt&apiKey=ee116e1cbbf14dd28e1f7168d117cb88")
-            .then((data) => data.json())
-            .then((data) => {
-                sethome(data.articles)
-            })
-            .catch((error) => console.log(error));
+        let getdata = async () => {
+            let res = await fetch("https://newsapi.org/v2/everything?q=technology&language=en&sortBy=publishedAt&apiKey=ee116e1cbbf14dd28e1f7168d117cb88");
+            let data = await res.json();
+            sethome(data.articles);
+        }
+        getdata();
+        // fetch("https://newsapi.org/v2/everything?q=technology&language=en&sortBy=publishedAt&apiKey=ee116e1cbbf14dd28e1f7168d117cb88")
+        //     .then((data) => data.json())
+        //     .then((data) => {
+        //         sethome(data.articles)
+        //     })
+        //     .catch((error) => console.log(error));
     }, [])
     React.useEffect(() => {
-        fetch("https://newsapi.org/v2/everything?q=tesla&language=en&apiKey=ee116e1cbbf14dd28e1f7168d117cb88")
-            .then((data) => data.json())
-            .then((data) =>{
-                let res = data.articles;
-                let splice = res.splice(0, 8);
-                sethome1(splice);
-            })
-            .catch((error) => console.log(error));
+        let getdata = async () =>{
+            let res = await fetch("https://newsapi.org/v2/everything?q=tesla&language=en&apiKey=ee116e1cbbf14dd28e1f7168d117cb88");
+            let data = await res.json();
+            let get = data.articles;
+            let splice = get.splice(0,8);
+            sethome1(splice);
+        }
+        getdata();
+        // fetch("https://newsapi.org/v2/everything?q=tesla&language=en&apiKey=ee116e1cbbf14dd28e1f7168d117cb88")
+        //     .then((data) => data.json())
+        //     .then((data) => {
+        //         let res = data.articles;
+        //         let splice = res.splice(0, 8);
+        //         sethome1(splice);
+        //     })
+        //     .catch((error) => console.log(error));
     }, [])
 
 
