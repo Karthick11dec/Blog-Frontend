@@ -7,6 +7,7 @@ import Reset from "./Components/Reset";
 import Home1 from "./Components/Home1";
 import Edit from "./Components/Edit";
 import Front from "./Components/Front";
+import Contact from "./Components/Contact";
 
 function App() {
 
@@ -36,6 +37,9 @@ function App() {
         </Route>
         <Route path="/edit/:id" exact={true}>
           <Edit />
+        </Route>
+        <Route path="/contact" exact={true}>
+          <Contact />
         </Route>
       </Switch>
     </BrowserRouter>

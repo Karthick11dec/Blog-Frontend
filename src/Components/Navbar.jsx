@@ -18,6 +18,9 @@ const Navbar = () => {
                     <Link to="/login" className="decor">
                         <span className="navbar-brand margin"><b>Log In</b></span>
                     </Link>
+                    <Link to="/contact" className="decor">
+                        <span className="navbar-brand margin"><b>Contact</b></span>
+                    </Link>
                 </div>
             </nav>
         </Fragment>

@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/home.css';
 import Navbar from "./Navbar";
 import Data from "./Data";
+import Contact from './Contact';
 
 const Home = () => {
 
@@ -161,6 +162,7 @@ const Home = () => {
                     ))}
                 </div>
             </div>
+            <Contact />
         </>
     )
 }

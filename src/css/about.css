@@ -1,0 +1,14 @@
+.bg{
+    color: whitesmoke;
+    background-image: linear-gradient(to right, rgb(180, 144, 221) , rgb(145, 19, 161));
+}
+.send{
+    background-color: whitesmoke;
+    font-weight: bold;
+    color:rgb(47, 15, 51) ;
+    text-align: center;
+}
+.send:hover{
+background-color: rgb(145, 19, 161);
+color: white;
+}
